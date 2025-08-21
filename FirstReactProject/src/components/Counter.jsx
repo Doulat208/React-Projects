@@ -1,32 +1,32 @@
 import { useState } from "react";
 
-const Counter = () => {
+// Now Counter is a controlled components as it is manage by App.jsx here
+// Counter is not managing any of its State
+const Counter = (props) => {
     // let count = 0;       Its a normal js variable
-    let [count, setCount] = useState(0);    // Its a  react state varible 
-    // Its alwys take a intial value , which is 0
-    // and return one variable here count and a function which is setCount
-    // only the setCount can change the value of count
+    // let [count, setCount] = useState(probs.initialValue);    // Its a  react state varible 
+    let {count, onIncrement, onDecrement} = props   // this is called destructuring to get the varibale from the object so that we dont have to write props multiple times
 
-    // let [varname, setVarname] = useState(());
-
-    // Its a function for decement but we will use arrow function 
-    function decrement(){
-        // count--;
-        setCount(() => count--);
-        console.log(count);
+    const checkCSS =()=> {
+      // return count === 0 ? {color: "red"} : count < 0 ? {color: "blue"} : {color: "green"}
+      if( count === 0){
+        return {color : "red"}
+      }else if(count < 0){
+        return {color : "blue"}
+      }else{
+        return {color : "green"}
+      }
     }
     
-    // Its a arrow func to increament count value
-    const increment = () => {
-        // count++;
-        setCount(() => count++);
-        console.log(count);
+    const buttonCSS =()=> {
+      return {backgroundColor : "black", color : "yellow"}
     }
+
     return (
       <div>
-        <button onClick={decrement}>Decrement</button>
-            <b> {count} </b>
-        <button onClick={increment}>Increment</button>
+        <button style={buttonCSS()} onClick={onDecrement}>Decrement</button>
+            <b style={checkCSS()}> {count === 0 ? "Zero" : count} </b>
+        <button style={buttonCSS()} onClick={onIncrement}>Increment</button>
       </div>
     )
 }

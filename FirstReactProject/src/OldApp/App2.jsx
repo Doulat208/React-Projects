@@ -2,7 +2,7 @@ import React from 'react'
 import Counter from '../components/Counter';
 import ChangeName from '../components/ChangeName';
 
-const App = () => {
+const App2 = () => {
     let count = 0;
     return (
         <div>

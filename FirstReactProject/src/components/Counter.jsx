@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 // Now Counter is a controlled components as it is manage by App.jsx here
 // Counter is not managing any of its State
 const Counter = (props) => {
@@ -24,9 +25,9 @@ const Counter = (props) => {
 
     return (
       <div>
-        <button style={buttonCSS()} onClick={onDecrement}>Decrement</button>
-            <b style={checkCSS()}> {count === 0 ? "Zero" : count} </b>
-        <button style={buttonCSS()} onClick={onIncrement}>Increment</button>
+        <button className="btn btn-primary"  onClick={onDecrement}>Decrement</button>
+            <b className="m-2 btn btn-warning" style={checkCSS()}> {count === 0 ? "Zero" : count} </b>
+        <button className="btn btn-primary" onClick={onIncrement}>Increment</button>
       </div>
     )
 }

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Table = (props) => {
+  const navigate = useNavigate();
 
   // let [count,setCout] = useState(1);
   // let mul = []
@@ -29,6 +31,7 @@ const Table = (props) => {
           <li key={index+1}> {`${num} x ${index+1} = ${num * (index+1)}` }</li>
         ))
       } */}
+      <button className='btn btn-danger' onClick={()=>navigate(-1)}>Go Back</button>
     </div>
   )
 }

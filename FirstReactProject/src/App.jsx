@@ -1,30 +1,28 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import FormHandling from './components/FormHandling'
-import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './components/Home'
-import Error from './components/Error';
+import HeaderTask from './components/HeaderTask';
+import Choice from './components/Choice';
+import AboutUs from './components/AboutUs';
+import ContactUs from './components/ContactUs';
+import Fruite from './components/Fruite';
 import Table from './components/Table';
-import Counter from './components/Counter';
-import Lang from './components/Lang';
-import JavaCom from './components/JavaCom';
-import PythonCom from './components/PythonCom';
 
 const App = () => {
   return (
     <div>
-      <Header/>
+
+      <HeaderTask/>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/formhandling" element={<FormHandling />} />
-        <Route path="/counter" element={<Counter />} />
-        <Route path="/table" element={<Table />} />
-        <Route path="Lang" element={<Lang />}>
-          <Route path='Java' element={<JavaCom />} />
-          <Route path='Python' element={<PythonCom />} />
+        <Route path='/' element={<Home/>} />
+        <Route path='/ContactUs' element={<ContactUs/>} />
+        <Route path='/AboutUs' element={<AboutUs/>} />
+        <Route path='Choice' element={<Choice/>} >
+            <Route path='Fruite' element={<Fruite/>} />
         </Route>
-        <Route path="*" element={<Error />} />
+        <Route path='/table/:value' element={<Table />}/>
+        <Route path='/table' element={<Table num = {4}/>}/>
       </Routes>
       <Footer/>
     </div>

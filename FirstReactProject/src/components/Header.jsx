@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-          <NavLink className="navbar-brand" to="/">Navbar</NavLink>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary ">
+        <div className="container-fluid bg-primary">
+          <NavLink className="navbar-brand text-light" to="/">Navbar</NavLink>
 
           <button
             className="navbar-toggler"
@@ -26,7 +26,7 @@ const Header = () => {
                   className="nav-link"
                   to="/"
                   style={({ isActive }) => ({
-                    color: isActive ? "red" : "black",
+                    color: isActive ? "yellow" : "white",
                     fontWeight: isActive ? "bold" : "normal",
                   })}
                 >
@@ -39,7 +39,7 @@ const Header = () => {
                   className="nav-link"
                   to="/formhandling"
                   style={({ isActive }) => ({
-                    color: isActive ? "red" : "black",
+                    color: isActive ? "yellow" : "white",
                     fontWeight: isActive ? "bold" : "normal",
                   })}
                 >
@@ -52,7 +52,7 @@ const Header = () => {
                   className="nav-link"
                   to="/table"
                   style={({ isActive }) => ({
-                    color: isActive ? "red" : "black",
+                    color: isActive ? "yellow" : "white",
                     fontWeight: isActive ? "bold" : "normal",
                   })}
                 >
@@ -65,7 +65,7 @@ const Header = () => {
                   className="nav-link"
                   to="/lang"
                   style={({ isActive }) => ({
-                    color: isActive ? "red" : "black",
+                    color: isActive ? "yellow" : "white",
                     fontWeight: isActive ? "bold" : "normal",
                   })}
                 >
@@ -73,7 +73,7 @@ const Header = () => {
                 </NavLink>
               </li>
 
-              <li className="nav-item dropdown">
+              {/* <li className="nav-item dropdown">
                 <NavLink
                   className="nav-link dropdown-toggle"
                   to="#"
@@ -95,13 +95,9 @@ const Header = () => {
                 <NavLink className="nav-link disabled" to="#" aria-disabled="true">
                   Disabled
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
 
-            <form className="d-flex" role="search">
-              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button className="btn btn-outline-success" type="submit">Search</button>
-            </form>
           </div>
         </div>
       </nav>

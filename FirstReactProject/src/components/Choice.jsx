@@ -3,7 +3,7 @@ import { Navigate, NavLink, Outlet } from "react-router-dom";
 
 const Choice = () => {
   return (
-    <div>
+    <div style={{height: "80vh"}}>
       <h1>Choice</h1>
       <nav>
         <NavLink to="Fruite"> Fruite </NavLink>

@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div>
+    <div className="bg-primary text-light p-2">
       <h5>@Copyright KIET</h5>
     </div>
   )

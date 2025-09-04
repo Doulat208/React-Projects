@@ -73,6 +73,17 @@ const HeaderTask = () => {
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" 
+                    to="/query"
+                    style={({isActive}) => ({
+                        color: isActive ? "yellow" : "white",
+                        fontWeight: isActive ? "bold" : "normal",
+                    })}
+                >
+                    Query
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" 
                     to="/AboutUs"
                     style={({isActive}) => ({
                         color: isActive ? "yellow" : "white",

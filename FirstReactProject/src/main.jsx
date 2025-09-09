@@ -7,7 +7,8 @@ import "bootstrap/dist/js/bootstrap.js"
 import { BrowserRouter } from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  // here the react is in strict mode because of that react do double rendering before running any component
+  <StrictMode>    
     <BrowserRouter>
       <App />
     </BrowserRouter>

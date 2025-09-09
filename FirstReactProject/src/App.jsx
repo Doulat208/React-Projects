@@ -10,6 +10,7 @@ import Fruite from './components/Fruite';
 import Table from './components/Table';
 import Query from './components/Query';
 import Error from './components/Error';
+import UseEffectInfo from './components/UseEffectInfo';
 
 const App = () => {
   return (
@@ -26,6 +27,8 @@ const App = () => {
         <Route path='/table/:value' element={<Table />}/>
         <Route path='/table' element={<Table num = {4}/>}/>
         <Route path='/query' element={<Query />}/>
+        <Route path='/useeffect' element={<UseEffectInfo />}/>
+
       </Routes>
       <Footer/>
     </div>

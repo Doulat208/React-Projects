@@ -94,6 +94,18 @@ const HeaderTask = () => {
                   AboutUs
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" 
+                    to="/useeffect"
+                    style={({isActive}) => ({
+                        color: isActive ? "yellow" : "white",
+                        fontWeight: isActive ? "bold" : "normal",
+                    })}
+                >
+                    
+                  UseEffect
+                </NavLink>
+              </li>
               
             </ul>
           </div>

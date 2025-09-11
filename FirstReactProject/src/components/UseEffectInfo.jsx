@@ -8,6 +8,10 @@ const UseEffectInfo = () => {
 
   let name;
 
+  // Mount and Unmount
+  // the useEffect execute before mount of any content means, before load the content
+  // There is a 
+
   // this is the most usable hook in react
   // It is the first function to call when a component is render
   // It use automatically wheneverwe do somathing in the component
@@ -18,6 +22,7 @@ const UseEffectInfo = () => {
     console.log(`counter= ${count}`);
   }, [count]);
 
+
   // this called only one time when the component is render for the first time
   useEffect(() => {
     console.log(`counter= ${count}`);
@@ -26,6 +31,9 @@ const UseEffectInfo = () => {
   // this called every time whenever there is something happen in that component
   useEffect(() => {
     console.log(`Without Counter`);
+    return () => {
+      console.log("unmount")
+    }
   });
 
   // this useeffect run when ever something changes in name vaariable

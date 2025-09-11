@@ -11,6 +11,8 @@ import Table from './components/Table';
 import Query from './components/Query';
 import Error from './components/Error';
 import UseEffectInfo from './components/UseEffectInfo';
+import UseContexInfo from './components/UseContexInfo';
+import Color from './components/Color';
 
 const App = () => {
   return (
@@ -28,6 +30,9 @@ const App = () => {
         <Route path='/table' element={<Table num = {4}/>}/>
         <Route path='/query' element={<Query />}/>
         <Route path='/useeffect' element={<UseEffectInfo />}/>
+        <Route path='/usecontext' element={<UseContexInfo />}/>
+        <Route path='/color' element={<Color />}/>
+        <Route path='/*' element={<Error />}/>
 
       </Routes>
       <Footer/>

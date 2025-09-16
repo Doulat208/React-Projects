@@ -13,6 +13,9 @@ import Error from './components/Error';
 import UseEffectInfo from './components/UseEffectInfo';
 import UseContexInfo from './components/UseContexInfo';
 import Color from './components/Color';
+import UseReducerInfo from './components/UseReducerInfo';
+import UseMemoInfo from './components/UseMemoInfo';
+import Dolly from './components/Dolly';
 
 const App = () => {
   return (
@@ -32,6 +35,9 @@ const App = () => {
         <Route path='/useeffect' element={<UseEffectInfo />}/>
         <Route path='/usecontext' element={<UseContexInfo />}/>
         <Route path='/color' element={<Color />}/>
+        <Route path='/usereducer' element={<UseReducerInfo />}/>
+        <Route path='/usememo' element={<UseMemoInfo />}/>
+        <Route path='/dolly' element={<Dolly />}/>
         <Route path='/*' element={<Error />}/>
 
       </Routes>

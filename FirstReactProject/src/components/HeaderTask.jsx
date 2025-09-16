@@ -130,6 +130,42 @@ const HeaderTask = () => {
                 </NavLink>
               </li>
 
+              <li className="nav-item">
+                <NavLink className="nav-link" 
+                    to="/usereducer"
+                    style={({isActive}) => ({
+                        color: isActive ? "yellow" : "white",
+                        fontWeight: isActive ? "bold" : "normal",
+                    })}
+                >
+                  UseReducer
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink className="nav-link" 
+                    to="/usememo"
+                    style={({isActive}) => ({
+                        color: isActive ? "yellow" : "white",
+                        fontWeight: isActive ? "bold" : "normal",
+                    })}
+                >
+                  useMemo
+                </NavLink>
+              </li>
+
+              {/* <li className="nav-item">
+                <NavLink className="nav-link" 
+                    to="/dolly"
+                    style={({isActive}) => ({
+                        color: isActive ? "yellow" : "white",
+                        fontWeight: isActive ? "bold" : "normal",
+                    })}
+                >
+                  Dolly
+                </NavLink>
+              </li> */}
+
               
               
             </ul>

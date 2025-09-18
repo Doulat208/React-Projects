@@ -16,6 +16,7 @@ import Color from './components/Color';
 import UseReducerInfo from './components/UseReducerInfo';
 import UseMemoInfo from './components/UseMemoInfo';
 import Dolly from './components/Dolly';
+import UseCallBackInfo from './components/UseCallBackInfo';
 
 const App = () => {
   return (
@@ -38,6 +39,7 @@ const App = () => {
         <Route path='/usereducer' element={<UseReducerInfo />}/>
         <Route path='/usememo' element={<UseMemoInfo />}/>
         <Route path='/dolly' element={<Dolly />}/>
+        <Route path='/usecallbackinfo' element={<UseCallBackInfo />}/>
         <Route path='/*' element={<Error />}/>
 
       </Routes>

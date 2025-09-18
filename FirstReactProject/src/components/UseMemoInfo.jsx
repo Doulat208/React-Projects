@@ -7,8 +7,8 @@ const UseMemoInfo = () => {
     const [num, setNum] = useState(2);
     const [color, setColor] = useState("#000000")
     const changeColor = () => {
-        let rColor = "#"+Math.floor(Math.random() * 555555).toString(16);
-        setColor(rColor)
+        let rColor = "#" + Math.floor(Math.random() * 555555).toString(16);
+        setColor(() => color = rColor)
     }
 
   return (
@@ -18,10 +18,10 @@ const UseMemoInfo = () => {
         value={num}
         onChange={(e) => setNum(e.target.value)}
       />
-      <button className="btn btn-primary" onChange={changeColor}>Change Color</button>
+      <button className="btn btn-primary" onClick={changeColor}>Change Color</button>
       </div>
       <div style={{color: color}}>
-        <Table num={num} />
+        <Table num={parseInt(num) || 0} />
       </div>
     </div>
   );

@@ -17,6 +17,8 @@ import UseReducerInfo from './components/UseReducerInfo';
 import UseMemoInfo from './components/UseMemoInfo';
 import Dolly from './components/Dolly';
 import UseCallBackInfo from './components/UseCallBackInfo';
+import UseCallBackInfo_Task from './components/UseCallBackInfo_Task';
+import UseRefInfo from './components/UseRefInfo';
 
 const App = () => {
   return (
@@ -40,6 +42,8 @@ const App = () => {
         <Route path='/usememo' element={<UseMemoInfo />}/>
         <Route path='/dolly' element={<Dolly />}/>
         <Route path='/usecallbackinfo' element={<UseCallBackInfo />}/>
+        <Route path='/usecallbackinfotask' element={<UseCallBackInfo_Task />}/>
+        <Route path='/userefinfo' element={<UseRefInfo />}/>
         <Route path='/*' element={<Error />}/>
 
       </Routes>

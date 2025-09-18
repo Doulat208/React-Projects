@@ -165,6 +165,28 @@ const HeaderTask = () => {
                   UseCallBack
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" 
+                    to="/usecallbackinfotask"
+                    style={({isActive}) => ({
+                        color: isActive ? "yellow" : "white",
+                        fontWeight: isActive ? "bold" : "normal",
+                    })}
+                >
+                  UseCallBackTask
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" 
+                    to="/userefinfo"
+                    style={({isActive}) => ({
+                        color: isActive ? "yellow" : "white",
+                        fontWeight: isActive ? "bold" : "normal",
+                    })}
+                >
+                  UseRef
+                </NavLink>
+              </li>
 
               {/* <li className="nav-item">
                 <NavLink className="nav-link" 
